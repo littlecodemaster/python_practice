@@ -20,47 +20,38 @@ def first_turn(a, b, c, d, e, f, g, h):
                 mycircle=Circle(Point(350.0, 350.0), 50)
                 mycircle.draw(win3)
                 white_list.append(1)
-                white_list.remove(0)
             if j==2:
                 mycircle=Circle(Point(450.0, 350.0), 50)
                 mycircle.draw(win3)
                 white_list.append(2)
-                white_list.remove(0)
             if j==3:
                 mycircle=Circle(Point(550.0, 350.0), 50)
                 mycircle.draw(win3)
                 white_list.append(3)
-                white_list.remove(0)
             if j==4:
                 mycircle=Circle(Point(350.0, 450.0), 50)
                 mycircle.draw(win3)
                 white_list.append(4)
-                white_list.remove(0)
             if j==5:
                 mycircle=Circle(Point(450.0, 450.0), 50)
                 mycircle.draw(win3)
                 white_list.append(5)
-                white_list.remove(0)
             if j==6:
                 mycircle=Circle(Point(550.0, 450.0), 50)
                 mycircle.draw(win3)
                 white_list.append(6)
-                white_list.remove(0)
             if j==7:
                 mycircle=Circle(Point(350.0, 550.0), 50)
                 mycircle.draw(win3)
                 white_list.append(7)
-                white_list.remove(0)
             if j==8:
                 mycircle=Circle(Point(450.0, 550.0), 50)
                 mycircle.draw(win3)
                 white_list.append(8)
-                white_list.remove(0)
             if j==9:
                 mycircle=Circle(Point(550.0, 550.0), 50)
                 mycircle.draw(win3)
                 white_list.append(9)
-                white_list.remove(0)
             valid=True
         else:
             print("This is an invalid move. Try again.")
@@ -77,63 +68,54 @@ def second_turn(a, b, c, d, e, f, g):
                 mynewcircle.setFill('black')
                 mynewcircle.draw(win3)
                 black_list.append(1)
-                black_list.remove(0)
             if j==2:
                 mynewcircle=Circle(Point(450.0, 350.0), 50)
                 mynewcircle.setFill('black')
                 mynewcircle.draw(win3)
                 black_list.append(2)
-                black_list.remove(0)
             if j==3:
                 mynewcircle=Circle(Point(550.0, 350.0), 50)
                 mynewcircle.setFill('black')
                 mynewcircle.draw(win3)
                 black_list.append(3)
-                black_list.remove(0)
             if j==4:
                 mynewcircle=Circle(Point(350.0, 450.0), 50)
                 mynewcircle.setFill('black')
                 mynewcircle.draw(win3)
                 black_list.append(4)
-                black_list.remove(0)
             if j==5:
                 mynewcircle=Circle(Point(450.0, 450.0), 50)
                 mynewcircle.setFill('black')
                 mynewcircle.draw(win3)
                 black_list.append(5)
-                black_list.remove(0)
             if j==6:
                 mynewcircle=Circle(Point(550.0, 450.0), 50)
                 mynewcircle.setFill('black')
                 mynewcircle.draw(win3)
                 black_list.append(6)
-                black_list.remove(0)
             if j==7:
                 mynewcircle=Circle(Point(350.0, 550.0), 50)
                 mynewcircle.setFill('black')
                 mynewcircle.draw(win3)
                 black_list.append(7)
-                black_list.remove(0)
             if j==8:
                 mynewcircle=Circle(Point(450.0, 550.0), 50)
                 mynewcircle.setFill('black')
                 mynewcircle.draw(win3)
                 black_list.append(8)
-                black_list.remove(0)
             if j==9:
                 mynewcircle=Circle(Point(550.0, 550.0), 50)
                 mynewcircle.setFill('black')
                 mynewcircle.draw(win3)
                 black_list.append(9)
-                black_list.remove(0)
             valid=True
         else:
             print("This is an invalid move. Try again.")
             j=int(input())
 print("Do you two want to play a tic tac toc game on this computer?")
 if input()=="yes" or input()=="Yes":
-    white_list=[0, 0, 0, 0, 0]
-    black_list=[0, 0, 0, 0]
+    white_list=[]
+    black_list=[]
     win3=GraphWin("tictactoc", 900, 900)
     myline=Line(Point(300.0, 300.0), Point(300.0, 600.0))
     myline.draw(win3)
@@ -151,23 +133,23 @@ if input()=="yes" or input()=="Yes":
     myline.draw(win3)
     myline=Line(Point(300.0, 600.0), Point(600.0, 600.0))
     myline.draw(win3)
-    a=b=c=d=e=f=g=h=i=0
+    a=b=c=d=e=f=g=h=0
     first_turn(a, b, c, d, e, f, g, h)
-    a=white_list[4]
+    a=white_list[0]
     second_turn(a, b, c, d, e, f, g)
-    b=black_list[3]
+    b=black_list[0]
     first_turn(a, b, c, d, e, f, g, h)
-    c=white_list[4]
+    c=white_list[1]
     second_turn(a, b, c, d, e, f, g)
-    d=black_list[3]
+    d=black_list[1]
     first_turn(a, b, c, d, e, f, g, h)
-    e=white_list[4]
+    e=white_list[2]
     check_if_win([a, c, e], 'White')
     second_turn(a, b, c, d, e, f, g)
-    f=black_list[3]
+    f=black_list[2]
     check_if_win([b, d, f], 'Black')
     first_turn(a, b, c, d, e, f, g, h)
-    g=white_list[4]
+    g=white_list[3]
     check_if_win([a, c, g], 'White')
     check_if_win([a, e, g], 'White')
     check_if_win([c, e, g], 'White')
