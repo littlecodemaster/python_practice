@@ -1,0 +1,6 @@
+print("Give me two numbers and I will tell you the first number power the second number. First, give me the number that you want to find the power of.")
+a=int(input())
+print("Now give me the power that you want it to.")
+b=int(input())
+print(a, "power", b, "is", a**b, end="")
+print(".")
