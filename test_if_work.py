@@ -1,6 +1,6 @@
-for i in range(7):
-    for j in range(7):
-        if i==j:
-            break
-        else:
-            print(i, ",", j)
+a=[['1']]
+b='13'
+if a[0]==b[0]:
+    print("a")
+else:
+    print("b")
