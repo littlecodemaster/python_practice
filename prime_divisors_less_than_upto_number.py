@@ -34,21 +34,25 @@ while d:
     elif c=="get to":
         d=False
         e=0
-        for f in range(1, a+1):
-            g=f
-            h=0
-            while h<len(prime_list):
-                if g%prime_list[h]==0:
-                    g=g//prime_list[h]
+        f=0
+        for g in range(1, a+1):
+            h=g
+            i=0
+            while i<len(prime_list):
+                if h%prime_list[i]==0:
+                    h=h//prime_list[i]
                 else:
-                    h=h+1
-            if g==1:
+                    i=i+1
+            if h==1:
                 if e==0:
                     e=1
                     print("The such numbers are written below.")
-                print(f)
+                print(g)
+                f=f+1
         if e==0:
             print("There are no such numbers.")
+        else:
+            print("So, there are", f, "such numbers.")
     else:
         print("Please say 'check' or 'get to'.")
         c=input()
