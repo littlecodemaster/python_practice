@@ -5,6 +5,7 @@ print("Now, give me 'b'.")
 b=int(input())
 print("The such numbers are written below.")
 c=0
+f=0
 prime_list=[2]
 while c**b<=a:
     c=c+1
@@ -30,4 +31,6 @@ for c in range(2, a):
         else:
             break
     if d==0:
+        f=f+1
         print(c)
+print("So, there are", f, "such numbers.")
