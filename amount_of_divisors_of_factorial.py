@@ -5,7 +5,7 @@ prime_list=[2]
 powers_of_prime_list=[]
 amount_of_repeatings=[]
 multiplication_of_amount_of_repeatings=[]
-for b in range(3, a):
+for b in range(3, a+1):
     c=0
     d=0
     while prime_list[c]<=sqrt(b):
@@ -31,4 +31,5 @@ for b in range(len(amount_of_repeatings)):
         multiplication_of_amount_of_repeatings.append(amount_of_repeatings[0])
     else:
         multiplication_of_amount_of_repeatings.append((amount_of_repeatings[b])*(multiplication_of_amount_of_repeatings[b-1]))
-print(multiplication_of_amount_of_repeatings[len(multiplication_of_amount_of_repeatings)-1])
+print("The amount of divisors of", a, "factorial is", multiplication_of_amount_of_repeatings[len(multiplication_of_amount_of_repeatings)-1], end="")
+print(".")
