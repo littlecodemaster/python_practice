@@ -3,6 +3,13 @@ print("Welcome to the elections game! Do you have 1 or 2 players? (Please say '1
 a=int(input())
 state_map={'Alaska':3, 'Washington':12, 'Oregon':7, 'California':55, 'Hawaii':4, 'Idaho':4, 'Nevada':6, 'Utah':6, 'Arizona':11, 'Montana':3, 'Wyoming':3, 'Colorado':9, 'New Mexico':5, 'North Dakota':3, 'South Dakota':3, 'Nebraska':5, 'Kansas':6, 'Oklahoma':7, 'Texas':38, 'Minnesota':10, 'Iowa':6, 'Missouri':10, 'Arkansas':6, 'Louisiana':8, 'Wisconsin':10, 'Michigan':16, 'Illinois':20, 'Indiana':11, 'Kentucky':8, 'Tennessee':11, 'Mississippi':6, 'Alabama':9, 'Ohio':18, 'West Virginia':5, 'Virginia':13, 'North Carolina':15, 'South Carolina':9, 'Georgia':16, 'Florida':29, 'Maine':4, 'Vermont':3, 'New Hamshire':4, 'Massachusetts':11, 'Connecticut':7, 'Rhode Island':4, 'New York':29, 'Pennsylvania':20, 'New Jersey':14, 'Delaware':3, 'Maryland':10, 'Washington D.C.':3}
 state_list=['Alaska', 'Washington', 'Oregon', 'California', 'Hawaii', 'Idaho', 'Nevada', 'Utah', 'Arizona', 'Montana', 'Wyoming', 'Colorado', 'New Mexico', 'North Dakota', 'South Dakota', 'Nebraska', 'Kansas', 'Oklahoma', 'Texas', 'Minnesota', 'Iowa', 'Missouri', 'Arkansas', 'Louisiana', 'Wisconsin', 'Michigan', 'Illinois', 'Indiana', 'Kentucky', 'Tennessee', 'Mississippi', 'Alabama', 'Ohio', 'West Virginia', 'Virginia', 'North Carolina', 'South Carolina', 'Georgia', 'Florida', 'Maine', 'Vermont', 'New Hamshire', 'Massachusetts', 'Connecticut', 'Rhode Island', 'New York', 'Pennsylvania', 'New Jersey', 'Delaware', 'Maryland', 'Washington D.C.']
+wrong=True
+while wrong:
+    if a==1 or a==2:
+        wrong=False
+    else:
+        print("Could you please say how many players you have again? ('1' or '2')")
+        a=int(input())
 if a==1:
     a=(randrange(2))+1
     b=0
