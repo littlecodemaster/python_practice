@@ -113,7 +113,8 @@ def second_turn(a, b, c, d, e, f, g):
             print("This is an invalid move. Try again.")
             j=int(input())
 print("Do you two want to play a tic tac toc game on this computer?")
-if input()=="yes" or input()=="Yes":
+inpt=input()
+if inpt=="yes" or inpt=="Yes":
     white_list=[]
     black_list=[]
     win3=GraphWin("tictactoc", 900, 900)
