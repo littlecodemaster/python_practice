@@ -1,2 +1,2 @@
-for a in range(10001):
-    print("")
+import random
+print(random.randint(1,26))
